@@ -17,6 +17,31 @@ São duas rodadas de revisão por ciclo automático. Se a segunda ainda tiver
 CHANGES, o job precisa de decisão humana. O builder permanece o mesmo entre
 correções; cada rodada tem quatro pareceres sobre o mesmo commit.
 
+## Lista de tarefas web
+
+Para abrir o aplicativo de tarefas, execute na raiz do repositório:
+
+```bash
+python3 -m http.server 8001 --bind 127.0.0.1 --directory todo
+```
+
+Abra [a lista de tarefas local](http://localhost:8001/). Não há dependências a
+instalar nem etapa de build. Escreva uma tarefa e clique em **Adicionar** ou
+pressione Enter. Use a caixa de seleção para concluir ou reabrir uma tarefa e o
+botão de lixeira para excluí-la. Todos os controles funcionam com teclado;
+Tab muda o foco e Espaço alterna a caixa de seleção. Para encerrar o servidor,
+pressione Ctrl+C no terminal.
+
+A lista fica no `localStorage`, na chave `codefactory.todo.v1`, somente neste
+navegador e nesta origem (protocolo, endereço e porta). Reabrir a mesma URL
+mantém as tarefas; outro navegador, endereço ou porta tem uma lista separada.
+Não há envio para serviços externos, conta, backup ou sincronização. Limpar os
+dados do navegador remove a lista; sessões privadas podem descartá-la ao sair.
+Dados salvos inválidos são ignorados e a interface avisa. Se o armazenamento
+estiver bloqueado ou sem espaço, os controles continuam funcionando em memória,
+mas um aviso informa que as alterações podem ser perdidas ao fechar ou
+recarregar a página.
+
 ## Usar
 
 Abra uma sessão do Codex neste repositório, com ferramentas de subagentes

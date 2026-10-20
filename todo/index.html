@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Uma lista simples para organizar suas tarefas, salva neste navegador.">
+  <title>Minha lista de tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <p class="eyebrow"><span aria-hidden="true">✓</span> MINHA LISTA</p>
+      <h1>Um passo de cada vez.</h1>
+      <p>Anote suas tarefas e abra espaço para o que importa.</p>
+    </header>
+
+    <section class="workspace" aria-labelledby="list-title">
+      <form id="task-form" novalidate>
+        <label for="task-input">O que você precisa fazer?</label>
+        <div class="input-row">
+          <input id="task-input" name="task" type="text" autocomplete="off"
+            placeholder="Ex.: ler um capítulo do livro" aria-describedby="input-hint input-error">
+          <button class="add-button" type="submit"><span aria-hidden="true">+</span> Adicionar</button>
+        </div>
+        <p class="hint" id="input-hint">Pressione Enter ou clique em Adicionar.</p>
+        <p class="error" id="input-error" role="alert" hidden></p>
+      </form>
+
+      <p class="storage-warning" id="storage-warning" role="status" hidden></p>
+
+      <div class="list-header">
+        <h2 id="list-title">Suas tarefas</h2>
+        <p id="task-count">Nenhuma tarefa</p>
+      </div>
+      <ul id="task-list" aria-labelledby="list-title"></ul>
+      <div class="empty-state" id="empty-state">
+        <span class="empty-icon" aria-hidden="true">✓</span>
+        <h3>Sua lista começa aqui</h3>
+        <p>Adicione sua primeira tarefa no campo acima.</p>
+      </div>
+      <p class="list-help" id="list-help" hidden>Marque uma tarefa para concluir. Desmarque para reabrir.</p>
+    </section>
+    <footer>Suas tarefas ficam neste navegador, sem envio para outros serviços.</footer>
+    <p class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+  </main>
+</body>
+</html>
