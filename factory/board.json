@@ -1,5 +1,52 @@
 {
   "version": 1,
-  "updated_at": null,
-  "jobs": []
+  "updated_at": "2026-10-20T16:00:40.077287+00:00",
+  "jobs": [
+    {
+      "id": "001-todo-list",
+      "request": "Cria um simples app de todo list web.",
+      "branch": "factory/001-todo-list",
+      "stage": "done",
+      "round": 1,
+      "cycle_start": 1,
+      "reviews": {
+        "security": "PASS",
+        "ux": "PASS",
+        "ui": "PASS",
+        "code": "PASS"
+      },
+      "rounds": [
+        {
+          "number": 1,
+          "commit": "784f2329911b207275f3ebcd4a35951c1d688aa7",
+          "reviews": {
+            "security": "PASS",
+            "ux": "PASS",
+            "ui": "PASS",
+            "code": "PASS"
+          }
+        }
+      ],
+      "commit": "784f2329911b207275f3ebcd4a35951c1d688aa7",
+      "spec_hash": "61476b0f04ed344d2828ff94949264be15684f76597517fac5e172845aed0ed3",
+      "builder_id": "/root/builder_001_todo_list",
+      "builder_history": [
+        {
+          "id": "/root/builder_001_todo_list",
+          "reason": null,
+          "at": "2026-10-20T15:51:27.038333+00:00"
+        }
+      ],
+      "feedback": [],
+      "backlog": null,
+      "decision": {
+        "verdict": "APPROVE",
+        "commit": "784f2329911b207275f3ebcd4a35951c1d688aa7"
+      },
+      "human_approval": null,
+      "reason": null,
+      "created_at": "2026-10-20T15:49:48.533689+00:00",
+      "merged_at": "2026-10-20T16:00:40.077269+00:00"
+    }
+  ]
 }
